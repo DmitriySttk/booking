@@ -2,13 +2,16 @@
 
 <h1>Activities</h1>
 
-<div id="activities">
-  <% @activities.each do |activity| %>
-    <%= render activity %>
-    <p>
-      <%= link_to "Show this activity", activity %>
-    </p>
-  <% end %>
-</div>
+<ul class="list-group">
+  <div id="activities">
+    <% @activities.each do |activity| %>
+      <li class="list-group-item"> <%= render activity %> </li>
+      <p>
+       <%= link_to "Show this activity", activity, class: "btn btn-info" %>
+      </p>
+    <% end %>
+  </div>
+</ul>
 
-<%= link_to "New activity", new_activity_path %>
+<%= link_to "New activity", new_activity_path, class: "btn btn-secondary" %>
+
