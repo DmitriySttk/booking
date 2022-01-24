@@ -1,0 +1,16 @@
+<h1>Activities</h1>
+
+<ul class="list-group">
+  <div id="activities">
+    <% @activities.each do |activity| %>
+      <li class="list-group-item"> <%= render activity %> </li>
+      <p>
+        <%= link_to "Show this activity", activity, class: "btn btn-info" %>
+        <%= link_to "Edit this activity", edit_activity_path(activity), class: "btn btn-secondary" %>
+        <%= link_to "Destroy this activity", activity, method: :delete, class: "btn btn-danger" %>
+    <% end %>
+  </div>
+</ul>
+
+<%= link_to "New activity", new_activity_path, class: "btn btn-secondary" %>
+
