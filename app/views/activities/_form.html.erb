@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+  <div class="field form-group">
+    <% form.label :name, style: "display: block" %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Name" %>
+  </div><br>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
+  <div class="field form-group">
+    <% form.label :email, style: "display: block" %>
+    <%= form.text_field :email, class: "form-control", placeholder: "Email" %>
+  </div><br>
 
-  <div>
-    <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
-  </div>
+  <div class="field form-group">
+    <% form.label :phone, style: "display: block" %>
+    <%= form.text_field :phone, class: "form-control", placeholder: "Phone" %>
+  </div><br>
 
-  <div>
-    <%= form.label :staff, style: "display: block" %>
-    <%= form.text_field :staff %>
-  </div>
+  <div class="field form-group">
+    <% form.label :staff, style: "display: block" %>
+    <%= form.text_field :staff, class: "form-control", placeholder: "staff field" %>
+  </div><br>
 
-  <div>
-    <%= form.label :map, style: "display: block" %>
-    <%= form.text_field :map %>
+  <div class="field form-group">
+    <% form.label :map, style: "display: block" %>
+    <%= form.text_field :map, class: "form-control", placeholder: "map field" %>
   </div>
-
-  <div>
-    <%= form.submit %>
+  <br>
+  <div class="field form-group">
+    <%= form.submit class: 'btn btn-primary' %>
   </div>
 <% end %>

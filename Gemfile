@@ -5,6 +5,8 @@ ruby "3.0.0"
 
 gem 'rubocop', '~> 1.24', '>= 1.24.1'
 
+gem 'simple_form'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.1"
 
