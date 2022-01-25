@@ -4,17 +4,25 @@
   <div class="form-inputs">
     <%= f.input :email,
                 required: false,
+                label: false,
                 autofocus: true,
-                input_html: { autocomplete: "email" } %>
+                class: "form-control", placeholder: "Email",
+                input_html: {autocomplete: "email"} %>
+    <br/>
     <%= f.input :password,
                 required: false,
-                input_html: { autocomplete: "current-password" } %>
+                label: false,
+                class: "form-control", placeholder: "Password",
+                input_html: {autocomplete: "current-password"} %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
-
+  <br/>
   <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+    <%= f.button :submit, "Log in", class: "btn btn-info" %>
   </div>
 <% end %>
+<br/>
 
 <%= render "devise/shared/links" %>
+
+<!--"form-inputs"-->
