@@ -1,6 +1,6 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, except: [:index, :show]
   # GET /activities or /activities.json
   def index
     @activities = Activity.all
@@ -65,6 +65,6 @@ class ActivitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def activity_params
-      params.require(:activity).permit(:name, :email, :phone, :staff, :map)
+      params.require(:activity).permit(:name, :email, :phone, :staff, :map, :user_id)
     end
 end
